@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+#top-nav {
+    /*It should be a nav-bar at the top, with a width of 100% and a height of 8.5em and it should have a background of #2e2e2e and it should be fixed*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3em;
+    background-color: #2e2e2e;
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
+}
+
+.nav-item {
+    user-select: none;
+    color: white;
+    cursor: pointer;
+    transition: .15s ease-in-out;
+    margin-right: 1em;
+}
+
+.nav-item:hover {
+    color: #ccc;
+}
+
+.nav-item:active {
+    color: #aaa;
+}
+
+#options {
+    position: fixed;
+    top: 3em;
+    width: 100%;
+    height: 6em;
+    background-color: #4c4c4c;
+}
