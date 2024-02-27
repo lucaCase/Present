@@ -1,0 +1,11 @@
+<p>{{post.id}}</p>
+<p>{{post.title}}</p>
+<p>{{post.content}}</p>
+<p>{{post.creator}}</p>
+<p>{{post.ratio}}</p>
+<button type="button" (click)="upvote()">Upvote</button>
+<button type="button" (click)="downvote()">Downvote</button>
+<br>
+<div *ngFor="let comment of post.comments" style="margin-left: 5em">
+    <app-comment [comment]="comment" [postId]="post.id" [communityId]="communityId"></app-comment>
+</div>

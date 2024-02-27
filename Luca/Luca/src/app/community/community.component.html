@@ -1,0 +1,13 @@
+<h1>{{community.name}}</h1>
+<p>Description: {{community.description}}</p>
+<p>Creator: {{community.creator}}</p>
+<p>Community is {{community.isPublic ? "public" : "private"}}</p>
+<p>Members: </p>
+<div style="margin-left: 5em">
+  <app-member class="member" *ngFor="let member of community.members" [member]="member"></app-member>
+</div>
+<p>Posts: </p>
+<div style="margin-left: 5em">
+  <app-post class="post" *ngFor="let post of community.posts" [post]="post" [communityId]="community.id"></app-post>
+</div>
+<button type="button" (click)="joinCommunity()">Join Community</button>

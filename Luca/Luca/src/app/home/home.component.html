@@ -1,0 +1,14 @@
+<app-nav></app-nav>
+<div *ngFor="let community of communities.communities">
+  <app-community [community]="community"></app-community>
+</div>
+
+<br>
+<input type="text" [(ngModel)]="name" placeholder="Name of the community">
+<br>
+<textarea type="text" [(ngModel)]="description" placeholder="Description of the community"></textarea>
+<br>
+<label for="isPublic">Public: </label>
+<input type="checkbox" id="isPublic" [(ngModel)]="isPublic">
+<br>
+<button (click)="addCommunity()">Add Community</button>

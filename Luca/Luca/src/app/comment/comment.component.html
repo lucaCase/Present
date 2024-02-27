@@ -1,0 +1,12 @@
+<p>{{comment.id}}</p>
+<p>{{comment.content}}</p>
+<p>{{comment.creator}}</p>
+<p>{{comment.ratio}}</p>
+<button type="button" (click)="upvote()">Upvote</button>
+<button type="button" (click)="downvote()">Downvote</button>
+<br>
+
+
+<div style="margin-left: 5em">
+  <app-comment *ngFor="let commentedComment of comment.comments" [comment]="commentedComment" [postId]="postId" [communityId]="communityId"></app-comment>
+</div>
